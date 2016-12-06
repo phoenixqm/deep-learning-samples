@@ -200,7 +200,7 @@ if __name__ == '__main__':
     # package. This heatmap is a useful visualization for finding features that
     # are most correlated with the result, and features that are possibly
     # collinear.
-    #plot_correlation_heatmap(X, header)
+    plot_correlation_heatmap(X, header)
 
     print('Read {0} data samples from {1}'.format(len(X), filename))
     X_train, y_train, X_test, y_test = split_dataset_to_train_test(X)
@@ -224,7 +224,7 @@ if __name__ == '__main__':
                                                  y_train, NSTEPS))
     # Plot cost vs. step for the last 100 steps (the first steps have an
     # enourmous errors compared to the final steps).
-    #plot_cost_vs_step([cost for _, cost in thetas_and_costs][:100])
+    plot_cost_vs_step([cost for _, cost in thetas_and_costs][:100])
 
     last_theta = thetas_and_costs[-1][0]
     print('Best theta found:', last_theta)
@@ -255,3 +255,5 @@ if __name__ == '__main__':
           compute_cost(X_test_augmented, y_test, theta_from_normal_eqn))
     print('Test set R^2 / normal:',
           compute_rsquared(X_test_augmented, y_test, theta_from_normal_eqn))
+
+    # raw_input("Press Enter to continue...")

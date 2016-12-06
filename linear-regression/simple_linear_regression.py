@@ -199,11 +199,11 @@ if __name__ == '__main__':
                                                 mbcost[-1][2]))
 
     # Plot the data in a scatterplot, with an animated line fit.
-    #plot_data_scatterplot(x, y, mb_history)
+    plot_data_scatterplot(x, y, mb_history)
 
     # Plot the cost function in 3D and as contours; add markers for the costs
     # values returned by the gradient descent procedure.
-    #plot_cost_3D(x, y, compute_cost, mb_history)
+    plot_cost_3D(x, y, compute_cost, mb_history)
 
     m, b = compute_mb_analytic(x, y)
     print('Analytic: m={0}, b={1}'.format(m, b))
